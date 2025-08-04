@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #2ecc71;
+    --accent-color: #ffd700;
+    --background-color: #fafefc;
+    --text-color: #0a301a
+}
+
+body{
+    background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL3JtNjA3LTNkYmQtc2NlbmUwOS1hLWJnLW1vY2t1cC5qcGc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar{
+    background: var(--text-color);
+}
+
+.toggler{
+    background: var(--background-color);
+}
+
+.active{
+    font-weight: 600;
+    border-bottom: 1px solid var(--background-color);
+}
+
+.title{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.school_name{
+    font-size: 1.5rem;
+}
+
+.get_started_btn {
+    color: var(--background-color);
+    background: var(--primary-color);
+    font-weight: 700;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.higlighted{
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+
+.hero {
+    animation: float 2s ease-in-out infinite;
+    }
+
+.get_started_btn:hover {
+    background: #45a049;
+    color: var(--background-color);
+}
+
+#reader {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    border: 3px solid #0d6efd;
+}
+
+#reader > div {
+    background: none !important;
+}
+
+#resultCard {
+    display: none;
+    transition: 0.3s ease;
+}
+
+#resultImage {
+    max-width: 150px;
+    border-radius: 8px;
+    border: 2px solid #dee2e6;
+}
+
+#resultText {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler{
+        color: var(--background-color);
+    }
+
+    navbar-toggler-icon{
+        color: var(--background-color);
+    }
+    #reader {
+        max-width: 90vw;
+    }
+
+    #resultImage {
+        text-align: center;
+    }
+}

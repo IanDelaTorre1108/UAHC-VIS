@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>University of Antique Hamtic Campus | Vehicle Information System</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+	<!-- Local CSS -->
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<style>
+	.card-body {
+    padding: 20px;
+}
+
+</style>
+
+<body>
+	<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand d-flex align-items-center" href="#">
+				<img src="../static/images/ua.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top me-2 img-fluid">
+				<span class="text-white">Vehicle Identification</span>
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link text-white" aria-current="page" href="{{ url_for('index')}} ">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="{{ url_for('scanner') }}">Vehicle Lookup</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white active" href="{{ url_for('about') }}">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="{{ url_for('contact') }}">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center mt-4 mb-4">
+				<h1 class="title">University of Antique - Hamtic Campus Vehicle Identification System</h1>
+				<p class="lead text-muted">An innovative solution to enhance campus security and vehicle management.</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-8 mb-4">
+				<h2 class="section-title highlighted p-2 text-center">Purpose of the System</h2>
+				<p class="container text-center">
+					The University of Antique - Hamtic Campus Vehicle Identification System aims to provide an efficient and secure way to track and identify vehicles on campus. Each vehicle is assigned a unique QR code that, when scanned, displays essential details such as the owner's information, vehicle specifications, and contact details. The system also logs every vehicle's entry and exit, ensuring complete transparency and security for the campus community.
+				</p>
+				<p class="container text-center">
+					This system is designed to streamline vehicle management on campus, providing a reliable method for monitoring parking and access control. It helps prevent unauthorized entry, ensuring that only approved vehicles can access restricted areas. Additionally, the system provides valuable data for the campus security team, enabling better resource allocation and quicker responses to incidents or emergencies.
+				</p>
+				<p class="container text-center">
+					The integration of QR codes makes it easy for security personnel and authorized users to access vehicle information quickly. The system is user-friendly, requiring minimal training for both staff and vehicle owners. With the use of cutting-edge technology, it enhances the overall campus security infrastructure and promotes a safe and orderly environment for students, faculty, and visitors alike.
+				</p>
+			</div>
+			<div class="col-md-4 d-flex justify-content-center align-items-center mb-4">
+				<img src="../static/images/ua.png" class="hero img-fluid" alt="UA Logo">
+			</div>
+		</div>  
+
+		<div class="row">
+			<div class="col-12">
+				<h2 class="section-title highlighted p-2 text-center">Key Features</h2>
+			</div>
+		
+			<!-- QR Code Scanning Card -->
+			<div class="col-md-6 col-lg-4 mb-4 d-flex">
+				<div class="card w-100 d-flex flex-column">
+					<img src="https://cdni.iconscout.com/illustration/premium/thumb/qr-code-scanner-illustration-download-in-svg-png-gif-file-formats--barcode-template-business-finance-pack-illustrations-3135966.png" class="card-img-top" alt="QR Code Scanning" style="width: 100%; max-width: 200px; margin: 0 auto; display: block;">
+					<div class="card-body text-center">
+						<h5 class="card-title">QR Code Scanning</h5>
+						<p class="card-text">Each vehicle is assigned a unique QR code, which can be scanned by authorized personnel or the public to view detailed information instantly.</p>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Real-time Tracking Card -->
+			<div class="col-md-6 col-lg-4 mb-4 d-flex">
+				<div class="card w-100 d-flex flex-column">
+					<img src="https://geniuseduerp.com/assets/img/vehical-tracking1.webp" class="card-img-top" alt="Real-time Tracking" style="width: 100%; max-width: 200px; margin: 0 auto; display: block;">
+					<div class="card-body text-center">
+						<h5 class="card-title">Real-time Tracking</h5>
+						<p class="card-text">The system tracks when vehicles enter and exit the campus, providing a detailed log of all movements for security purposes.</p>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Report & Management Card -->
+			<div class="col-md-6 col-lg-4 mb-4 d-flex">
+				<div class="card w-100 d-flex flex-column">
+					<img src="https://cdni.iconscout.com/illustration/premium/thumb/mechanic-detecting-faults-in-car-illustration-download-svg-png-gif-file-formats--station-detects-repairing-quality-check-inspection-pack-vehicle-illustrations-4617643.png?f=webp" class="card-img-top" alt="Report & Management" style="width: 100%; max-width: 200px; margin: 0 auto; display: block;">
+					<div class="card-body text-center">
+						<h5 class="card-title">Report & Management</h5>
+						<p class="card-text">Users can easily report suspicious vehicles or incidents, and administrators can take immediate action through the system's management interface.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="row mb-4">
+			<div class="col-12">
+				<h2 class="section-title text-center">Who Can Use the System?</h2>
+				<p class="text-center">The system is designed for use by a variety of individuals within the university community:</p>
+			</div>
+		
+			<!-- General User -->
+			<div class="col-md-4 col-lg-3 mb-4 d-flex">
+				<div class="card w-100 d-flex flex-column">
+					<img src="https://static-00.iconduck.com/assets.00/user-group-illustration-2048x1508-3m8qw8mc.png" class="card-img-top" alt="Students" style="width: 50%; margin: 0 auto; display: block;">
+					<div class="card-body text-center">
+						<h5 class="card-title"><strong>General User</strong></h5>
+						<p class="card-text">Identify vehicles related to their campus activities.</p>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Staff & Faculty -->
+			<div class="col-md-4 col-lg-3 mb-4 d-flex">
+				<div class="card w-100 d-flex flex-column">
+					<img src="https://images.squarespace-cdn.com/content/v1/5fa07bd946d8e32bc8776fbf/1617130891034-E5OG69DV1Z3GU1L297SA/TigerWell-Illustration-5.png" class="card-img-top" alt="Staff & Faculty" style="width: 50%; margin: 0 auto; display: block;">
+					<div class="card-body text-center">
+						<h5 class="card-title"><strong>Staff & Faculty</strong></h5>
+						<p class="card-text">Manage and track vehicles associated with their roles.</p>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Campus Security -->
+			<div class="col-md-4 col-lg-3 mb-4 d-flex">
+				<div class="card w-100 d-flex flex-column">
+					<img src="https://png.pngtree.com/png-clipart/20211121/original/pngtree-security-guard-employee-in-white-uniform-standing-at-east-sekuriti-satpam-png-image_6950739.png" class="card-img-top" alt="Security Guards" style="width: 50%; margin: 0 auto; display: block;">
+					<div class="card-body text-center">
+						<h5 class="card-title"><strong>Campus Security & Guards</strong></h5>
+						<p class="card-text">Monitor vehicle movements for safety and security.</p>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Admins -->
+			<div class="col-md-4 col-lg-3 mb-4 d-flex">
+				<div class="card w-100 d-flex flex-column">
+					<img src="https://cdn0.iconfinder.com/data/icons/solid-corporation-and-business-7/512/867-47-512.png" class="card-img-top" alt="Admins" style="width: 50%; margin: 0 auto; display: block;">
+					<div class="card-body text-center">
+						<h5 class="card-title"><strong>Admins</strong></h5>
+						<p class="card-text">Oversee the entire system, handle vehicle reports, and ensure smooth operations.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-12">
+				<h2 class="section-title">Benefits to the Campus Community</h2>
+				<p>This system brings numerous benefits to the University of Antique - Hamtic Campus, such as:</p>
+			</div>
+			<div class="col-md-3 mb-4 d-flex">
+				<div class="card w-100">
+					<img src="https://cdni.iconscout.com/illustration/premium/thumb/boy-giving-out-global-security-lock-illustration-download-in-svg-png-gif-file-formats--internet-browser-protection-cyber-pack-crime-illustrations-9791073.png?f=webp" class="card-img-top" alt="Enhanced Security">
+					<div class="card-body">
+						<h5 class="card-title">Enhanced Security</h5>
+						<p class="card-text">With real-time tracking and vehicle reporting capabilities, the campus ensures a safer environment.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-md-3 mb-4 d-flex">
+				<div class="card w-100">
+					<img src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-man-tracking-taxi-driver-cab-on-tablet-map-picture-image_8717235.png" class="card-img-top" alt="Efficient Vehicle Management">
+					<div class="card-body">
+						<h5 class="card-title">Efficient Vehicle Management</h5>
+						<p class="card-text">Eliminates the need for manual vehicle logs, making management seamless and automated.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-md-3 mb-4 d-flex">
+				<div class="card w-100">
+					<img src="https://static-00.iconduck.com/assets.00/qr-code-illustration-2048x1668-wseobvx0.png" class="card-img-top" alt="Convenience">
+					<div class="card-body">
+						<h5 class="card-title">Convenience</h5>
+						<p class="card-text">QR code scanning offers quick and easy access to vehicle data.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-md-3 mb-4 d-flex">
+				<div class="card w-100">
+					<img src="https://cdni.iconscout.com/illustration/premium/thumb/blogger-is-sharing-information-in-weblog-illustration-download-svg-png-gif-file-formats--personal-web-log-informational-website-online-journal-digital-marketing-pack-business-illustrations-6367374.png" class="card-img-top" alt="Transparency">
+					<div class="card-body">
+						<h5 class="card-title">Transparency</h5>
+						<p class="card-text">Detailed logs of vehicle entries and exits provide transparency and accountability.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-12">
+				<h2 class="section-title">Security & Privacy</h2>
+				<p>The system ensures user privacy by only displaying essential vehicle information, such as name, address, plate number, and contact details. It follows strict security protocols to protect all data.</p>
+			</div>
+		</div>
+		
+			<!-- Future Vision Section -->
+			<div class="row">
+			  <div class="col-12">
+				<h2 class="section-title">Future Vision</h2>
+				<p>Though still in its early stages, the team behind this system plans to continue improving and expanding its capabilities to further enhance campus security and streamline vehicle management.</p>
+			  </div>
+			</div>
+		
+		  </div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>

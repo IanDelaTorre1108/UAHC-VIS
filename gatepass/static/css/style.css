@@ -1,0 +1,44 @@
+:root {
+    --primary-color: #2ecc71;
+    --accent-color: #ffd700;
+    --background-color: #fafefc;
+    --text-color: #0a301a
+}
+
+body{
+    background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL3JtNjA3LTNkYmQtc2NlbmUwOS1hLWJnLW1vY2t1cC5qcGc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar{
+    background: var(--text-color);
+}
+
+.title{
+    color: var(--background-color);
+    font-weight: 600;
+}
+
+#reader {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 1);
+    margin: 0 auto;
+    border: 3px solid;
+}
+
+#toggleButton{
+    color: var(--background-color);
+    background: var(--primary-color);
+    font-weight: 600;
+}
+
+#currentDate{
+    font-weight: 900;
+    color: var(--text-color);
+}

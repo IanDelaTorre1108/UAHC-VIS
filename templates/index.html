@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>University of Antique Hamtic Campus | Vehicle Information System</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+	<!-- Local CSS -->
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand d-flex align-items-center" href="#">
+				<img src="../static/images/ua.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top me-2 img-fluid">
+				<span class="text-white">Vehicle Identification</span>
+			</a>
+
+			<button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation text-white">
+				<span class="navbar-toggler-icon" style="color: white;"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link text-white active" aria-current="page" href="{{ url_for('index')}} ">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="{{ url_for('scanner') }}">Vehicle Lookup</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="{{ url_for('about') }}">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="{{ url_for('contact') }}">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid index d-flex justify-content-center align-items-center centered-container">
+
+		<div class="row w-100">
+			<div class="container col-md-6 d-flex align-items-center justify-content-center" >
+				<div class="welcome_message container">
+					<h1 class="title"><span class="school_name">UNIVERSITY OF ANTIQUE - HAMTIC CAMPUS </span>VEHICLE IDENTIFICATION SYSTEM</h1>
+					<p class="message"> Welcome to the Vehicle Identification System of the University of Antique - Hamtic Campus! We are excited to provide a seamless and efficient way to manage vehicle registrations and related services. Your experience here is our priority, and we aim to ensure smooth operations every step of the way. </p>
+					
+					<a href="{{ url_for('scanner') }}" class="btn mt-3 get_started_btn">GET STARTED</a>
+				</div>
+			</div>
+			
+			<div class="col-md-6 d-flex justify-content-center align-items-center">
+				<img src="../static/images/FEG_Infographics_Industries_V5_Solution_Vehicle_Mgmt-21.png" class="img-fluid hero" alt="vehicle information icon">
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>

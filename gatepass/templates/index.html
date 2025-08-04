@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle QR Scanner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="../static/css/style.css">
+  
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand d-flex align-items-center" href="#">
+				<img src="https://antiquespride.edu.ph/wp-content/uploads/2021/12/ua1.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top me-2 img-fluid">
+				<span class="ms-2 title">UNIVERSITY OF ANTIQUE - HAMTIC CAMPUS | VEHICLE INFORMATION SYSTEM</span>
+			</a>
+
+			<button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation text-white">
+				<span class="navbar-toggler-icon" style="color: white;"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          
+          <li class="nav-item me-2">
+            <button id="toggleButton" class="btn btn-outline-light">Hide Logs</button>
+          </li>
+        </ul>
+      </div>
+      
+		</div>
+	</nav>
+  
+  <div class="container-fluid d-flex flex-column align-items-center justify-content-center">
+    <div class="row w-100 mb-4 mt-4">
+      <div class="col-md-6 mx-auto text-center">
+        <h2 class="text-center mb-4" id="currentDate"></h2>
+        <div id="reader" class="mb-3"></div>
+        <div id="scan-alert" class="alert d-none text-center" role="alert"></div>
+      </div>
+    </div>
+
+    <div class="row w-100 container" id="logSection">
+      <div class="col-md mx-auto">
+        <h2 class="text-center">Today's Vehicle Logs</h2>
+        <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search by plate number or owner..." oninput="filterTable()">
+  
+        <table class="table table-striped table-bordered table-dark" id="logTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Plate Number</th>
+              <th>Owner</th>
+              <th>Time In</th>
+              <th>Time Out</th>
+              <th>Report Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="../static/js/gatepass.js"></script>
+
+
+</body>
+</html>
